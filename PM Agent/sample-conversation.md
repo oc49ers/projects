@@ -8,7 +8,7 @@ You want to explore a new feature for helping small business owners track vendor
 ### User
 I want to explore a new feature for helping small business owners track vendor payments.
 
-### Agent
+### EJ
 That sounds promising. To help structure discovery, I need more detail first.
 - Who is the primary user or persona for this feature?
 - What is their current vendor payment process today?
@@ -17,7 +17,7 @@ That sounds promising. To help structure discovery, I need more detail first.
 ### User
 The primary user is a small business owner who currently uses spreadsheets and email to track payments. They struggle to know which invoices are due, which vendors have been paid, and how much cash they need to reserve.
 
-### Agent
+### EJ
 Great, that gives us a strong starting point. I recommend using either:
 - **Jobs to be Done** to understand the job they are hiring this feature for, or
 - **Opportunity Solution Tree** to map the problem, needs, and possible solutions.
@@ -27,7 +27,7 @@ Would you like me to generate a problem statement, user story, or opportunity ma
 ### User
 Please create all three artifacts.
 
-### Agent
+### EJ
 #### Problem Statement
 - **Context:** Small business owners use spreadsheets and email to track vendor payments.
 - **User / Persona:** Small business owner managing vendor invoices.
@@ -63,6 +63,29 @@ Please create all three artifacts.
   - Integrate with existing invoice and vendor data sources
   - Provide a simple dashboard and notification summary
 
+**Gherkin Feature:**
+```
+Feature: Vendor Payment Tracking Dashboard
+  As a small business owner
+  I want a single view of vendor invoice due dates, payment status, and cash requirements
+  So that I can avoid late payments and plan cash flow with confidence
+
+  Scenario: View upcoming due invoices
+    Given I have unpaid vendor invoices
+    When I access the payment dashboard
+    Then I see a list of upcoming due dates sorted by date
+
+  Scenario: Check payment status
+    Given I have vendor invoices with different payment statuses
+    When I view the invoice list
+    Then I can see which invoices are paid and which are unpaid
+
+  Scenario: Estimate cash requirements
+    Given I have upcoming due invoices
+    When I check the dashboard
+    Then I see an estimate of cash needed for upcoming payments
+```
+
 ```json
 {
   "artifactType": "user_story",
@@ -75,7 +98,30 @@ Please create all three artifacts.
     "The feature indicates paid vs unpaid vendor invoices",
     "The solution estimates cash required for upcoming payments"
   ],
-  "implementationNotes": "Integrate with existing invoice and vendor data sources. Provide a simple dashboard and notification summary."
+  "implementationNotes": "Integrate with existing invoice and vendor data sources. Provide a simple dashboard and notification summary.",
+  "gherkinFeature": {
+    "name": "Vendor Payment Tracking Dashboard",
+    "scenarios": [
+      {
+        "name": "View upcoming due invoices",
+        "given": "I have unpaid vendor invoices",
+        "when": "I access the payment dashboard",
+        "then": "I see a list of upcoming due dates sorted by date"
+      },
+      {
+        "name": "Check payment status",
+        "given": "I have vendor invoices with different payment statuses",
+        "when": "I view the invoice list",
+        "then": "I can see which invoices are paid and which are unpaid"
+      },
+      {
+        "name": "Estimate cash requirements",
+        "given": "I have upcoming due invoices",
+        "when": "I check the dashboard",
+        "then": "I see an estimate of cash needed for upcoming payments"
+      }
+    ]
+  }
 }
 ```
 
@@ -116,7 +162,7 @@ Please create all three artifacts.
 ### User
 Thanks. Can you also summarize the product fit?
 
-### Agent
+### EJ
 #### Benefit Alignment Summary
 - **User Benefit:** Clear, consolidated visibility into vendor payments and cash needs.
 - **Product/Service Element:** Financial operations dashboard and payment tracking workflow.
@@ -136,7 +182,7 @@ Thanks. Can you also summarize the product fit?
 ### User
 That is helpful. What should I do next?
 
-### Agent
+### Terese
 I recommend:
 1. Interview a few representative small business owners to validate the pain and current workflow.
 2. Define the MVP scope for the payment tracking dashboard.

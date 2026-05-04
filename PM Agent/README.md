@@ -1,4 +1,4 @@
-# Product Management Agent
+# EJ - Product Management Agent
 
 This workspace contains a custom VS Code Copilot agent designed to act as a conversational Product Management coworker. The agent supports discovery, problem definition, product alignment, and outputs artifacts in both Markdown and JSON.
 
@@ -13,7 +13,7 @@ This workspace contains a custom VS Code Copilot agent designed to act as a conv
 - Recommend product frameworks based on discovery stage
 - Generate artifacts:
   - Problem statements
-  - User stories formatted for coding-agent handoff
+  - User stories formatted for coding-agent handoff (including Gherkin scenarios)
   - Opportunity maps
   - Benefit alignment summaries
 - Provide artifacts in both Markdown and JSON
@@ -23,7 +23,7 @@ This workspace contains a custom VS Code Copilot agent designed to act as a conv
 1. Open the workspace in VS Code.
 2. Start a Copilot chat and select or invoke the Product Management Agent.
    - If you have a Copilot Chat pane, choose the agent from the agent selector.
-   - If prompted, type a direct request such as: `Use the Product Management Agent to help me discover a new feature.`
+   - If prompted, type a direct request such as: `Use EJ to help me discover a new feature.`
 3. Describe your product problem, customer segment, or discovery need.
 4. Ask the agent for a framework recommendation, a problem statement, a user story, or an opportunity map.
 
